@@ -1,0 +1,65 @@
+{
+  "scope": "ternary",
+  "source_sha256": "d354d979915c5c7d915edd43eb793f0bd7e1c05d34451176b87a510be1ac9339",
+  "measurement_version": "0.2-prototype",
+  "events": 26,
+  "metrics": {
+    "line": {
+      "covered": 1,
+      "total": 1,
+      "percent": 100.0,
+      "covered_ids": [
+        "L12"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#ternary(boolean,boolean)@11:statement1",
+        "FlowExamples#ternary(boolean,boolean)@11:statement2"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#ternary(boolean,boolean)@11:block1",
+        "FlowExamples#ternary(boolean,boolean)@11:block2",
+        "FlowExamples#ternary(boolean,boolean)@11:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#ternary(boolean,boolean)@11:decision1:F",
+        "FlowExamples#ternary(boolean,boolean)@11:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#ternary(boolean,boolean)@11:condition1:F",
+        "FlowExamples#ternary(boolean,boolean)@11:condition1:T",
+        "FlowExamples#ternary(boolean,boolean)@11:condition2:F",
+        "FlowExamples#ternary(boolean,boolean)@11:condition2:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition_decision": {
+      "covered": 6,
+      "total": 6,
+      "percent": 100.0
+    }
+  }
+}

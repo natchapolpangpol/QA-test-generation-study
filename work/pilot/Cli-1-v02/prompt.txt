@@ -1,0 +1,610 @@
+You are a unit-test generator in a controlled experiment. Do not use tools,
+inspect files, execute commands, browse the web, or use external project knowledge.
+All allowed context is below. Return JSON with java_source containing a complete JUnit
+4.13.2 class named GeneratedTest in package org.apache.commons.cli, compatible with
+Java 11. Only produce tests; do not reproduce or alter production code.
+
+Create a test suite for the supplied reference class CommandLine. Seek source line,
+block, decision and atomic-condition coverage. Use meaningful concrete assertions.
+Preserve expected behavior of the reference. You may use package-visible APIs because
+the test is in the same package. Use only the supplied version's APIs plus Java/JUnit.
+Do not mock the class under test, use reflection, read files, use networking, or spawn
+processes. Do not write tests for private methods directly. Tests should be independent
+and deterministic. This is the first generation; no execution feedback is available.
+
+REFERENCE CLASS:
+/**
+ * Copyright 1999-2001,2004 The Apache Software Foundation.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.commons.cli;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+
+/** 
+ * <p>Represents list of arguments parsed against
+ * a {@link Options} descriptor.<p>
+ *
+ * <p>It allows querying of a boolean {@link #hasOption(String opt)},
+ * in addition to retrieving the {@link #getOptionValue(String opt)}
+ * for options requiring arguments.</p>
+ *
+ * <p>Additionally, any left-over or unrecognized arguments,
+ * are available for further processing.</p>
+ *
+ * @author bob mcwhirter (bob @ werken.com)
+ * @author <a href="mailto:jstrachan@apache.org">James Strachan</a>
+ * @author John Keyes (john at integralsource.com)
+ */
+public class CommandLine {
+
+    /** the unrecognised options/arguments */
+    private List args = new LinkedList();
+
+    /** the processed options */
+    private Set options = new HashSet();
+
+    /** Map of unique options for ease to get complete list of options */
+//    private Set allOptions = new HashSet();
+
+    /**
+     * Creates a command line.
+     */
+    CommandLine()
+    {
+        // nothing to do
+    }
+
+    /** 
+     * Query to see if an option has been set.
+     *
+     * @param opt Short name of the option
+     * @return true if set, false if not
+     */
+    public boolean hasOption(String opt)
+    {
+        return options.contains( resolveOption(opt));
+    }
+
+    /** 
+     * Query to see if an option has been set.
+     *
+     * @param opt character name of the option
+     * @return true if set, false if not
+     */
+    public boolean hasOption(char opt)
+    {
+        return hasOption(String.valueOf(opt));
+    }
+
+    /**
+     * Return the <code>Object</code> type of this <code>Option</code>.
+     *
+     * @param opt the name of the option
+     * @return the type of this <code>Option</code>
+     */
+    public Object getOptionObject(String opt)
+    {
+        String res = getOptionValue(opt);
+
+        Option option = resolveOption(opt);
+        if (option == null)
+        {
+            return null;
+        }
+
+        Object type = option.getType();
+
+        return (res == null)        ? null : TypeHandler.createValue(res, type);
+    }
+
+    /**
+     * Return the <code>Object</code> type of this <code>Option</code>.
+     *
+     * @param opt the name of the option
+     * @return the type of opt
+     */
+    public Object getOptionObject(char opt)
+    {
+        return getOptionObject(String.valueOf(opt));
+    }
+
+    /** 
+     * Retrieve the argument, if any, of this option.
+     *
+     * @param opt the name of the option
+     * @return Value of the argument if option is set, and has an argument,
+     * otherwise null.
+     */
+    public String getOptionValue(String opt)
+    {
+        String[] values = getOptionValues(opt);
+
+        return (values == null) ? null : values[0];
+    }
+
+    /** 
+     * Retrieve the argument, if any, of this option.
+     *
+     * @param opt the character name of the option
+     * @return Value of the argument if option is set, and has an argument,
+     * otherwise null.
+     */
+    public String getOptionValue(char opt)
+    {
+        return getOptionValue(String.valueOf(opt));
+    }
+
+    /** 
+     * Retrieves the array of values, if any, of an option.
+     *
+     * @param opt string name of the option
+     * @return Values of the argument if option is set, and has an argument,
+     * otherwise null.
+     */
+    public String[] getOptionValues(String opt)
+    {
+        Option key = resolveOption( opt );
+
+        if (options.contains(key))
+        {
+            return key.getValues();
+        }
+
+        return null;
+        }
+
+    /**
+     * <p>Retrieves the option object given the long or short option as a String</p>
+     * @param opt short or long name of the option
+     * @return Canonicalized option
+     */
+    private Option resolveOption( String opt )
+    {
+        opt = Util.stripLeadingHyphens(opt);
+        for ( Iterator it = options.iterator(); it.hasNext(); )
+        {
+            Option option = (Option) it.next();
+            if (opt.equals(option.getOpt()))
+            {
+                return option;
+            }
+            if (opt.equals( option.getLongOpt()))
+            {
+                return option;
+        }
+
+        }
+        return null;
+    }
+
+    /** 
+     * Retrieves the array of values, if any, of an option.
+     *
+     * @param opt character name of the option
+     * @return Values of the argument if option is set, and has an argument,
+     * otherwise null.
+     */
+    public String[] getOptionValues(char opt)
+    {
+        return getOptionValues(String.valueOf(opt));
+    }
+
+    /** 
+     * Retrieve the argument, if any, of an option.
+     *
+     * @param opt name of the option
+     * @param defaultValue is the default value to be returned if the option 
+     * is not specified
+     * @return Value of the argument if option is set, and has an argument,
+     * otherwise <code>defaultValue</code>.
+     */
+    public String getOptionValue(String opt, String defaultValue)
+    {
+        String answer = getOptionValue(opt);
+
+        return (answer != null) ? answer : defaultValue;
+    }
+
+    /** 
+     * Retrieve the argument, if any, of an option.
+     *
+     * @param opt character name of the option
+     * @param defaultValue is the default value to be returned if the option 
+     * is not specified
+     * @return Value of the argument if option is set, and has an argument,
+     * otherwise <code>defaultValue</code>.
+     */
+    public String getOptionValue(char opt, String defaultValue)
+    {
+        return getOptionValue(String.valueOf(opt), defaultValue);
+    }
+
+    /** 
+     * Retrieve any left-over non-recognized options and arguments
+     *
+     * @return remaining items passed in but not parsed as an array
+     */
+    public String[] getArgs()
+    {
+        String[] answer = new String[args.size()];
+
+        args.toArray(answer);
+
+        return answer;
+    }
+
+    /** 
+     * Retrieve any left-over non-recognized options and arguments
+     *
+     * @return remaining items passed in but not parsed as a <code>List</code>.
+     */
+    public List getArgList()
+    {
+        return args;
+    }
+
+    /** 
+     * jkeyes
+     * - commented out until it is implemented properly
+     * <p>Dump state, suitable for debugging.</p>
+     *
+     * @return Stringified form of this object
+     */
+
+    /*
+    public String toString() {
+        StringBuffer buf = new StringBuffer();
+            
+        buf.append("[ CommandLine: [ options: ");
+        buf.append(options.toString());
+        buf.append(" ] [ args: ");
+        buf.append(args.toString());
+        buf.append(" ] ]");
+            
+        return buf.toString();
+    }
+    */
+
+    /**
+     * Add left-over unrecognized option/argument.
+     *
+     * @param arg the unrecognised option/argument.
+     */
+    void addArg(String arg)
+    {
+        args.add(arg);
+    }
+
+    /**
+     * Add an option to the command line.  The values of 
+     * the option are stored.
+     *
+     * @param opt the processed option
+     */
+    void addOption(Option opt)
+    {
+        options.add(opt);
+    }
+
+    /**
+     * Returns an iterator over the Option members of CommandLine.
+     *
+     * @return an <code>Iterator</code> over the processed {@link Option} 
+     * members of this {@link CommandLine}
+     */
+    public Iterator iterator()
+    {
+        return options.iterator();
+    }
+
+    /**
+     * Returns an array of the processed {@link Option}s.
+     *
+     * @return an array of the processed {@link Option}s.
+     */
+    public Option[] getOptions()
+    {
+        Collection processed = options;
+
+        // reinitialise array
+        Option[] optionsArray = new Option[processed.size()];
+
+        // return the array
+        return (Option[]) processed.toArray(optionsArray);
+    }
+}
+DEPENDENCY API SIGNATURES (not executable source):
+Type AlreadySelectedException
+extends [ParseException] implements []
+public AlreadySelectedException(String message);
+
+Type BasicParser
+extends [Parser] implements []
+protected String[] flatten(Options options, String[] arguments, boolean stopAtNonOption);
+
+Type CommandLineParser
+extends [] implements []
+ abstract CommandLine parse(Options options, String[] arguments) throws ParseException;
+ abstract CommandLine parse(Options options, String[] arguments, Properties properties) throws ParseException;
+ abstract CommandLine parse(Options options, String[] arguments, boolean stopAtNonOption) throws ParseException;
+ abstract CommandLine parse(Options options, String[] arguments, Properties properties, boolean stopAtNonOption) throws ParseException;
+
+Type GnuParser
+extends [Parser] implements []
+protected String[] flatten(Options options, String[] arguments, boolean stopAtNonOption);
+
+Type HelpFormatter
+extends [] implements []
+// --------------------------------------------------------------- Constants
+/**
+ * default number of characters per line
+ */
+public static final int DEFAULT_WIDTH = 74;
+/**
+ * default padding to the left of each line
+ */
+public static final int DEFAULT_LEFT_PAD = 1;
+/**
+ * ??
+ */
+public static final int DEFAULT_DESC_PAD = 3;
+/**
+ * the string to display at the begining of the usage statement
+ */
+public static final String DEFAULT_SYNTAX_PREFIX = "usage: ";
+/**
+ * default prefix for shortOpts
+ */
+public static final String DEFAULT_OPT_PREFIX = "-";
+/**
+ * default prefix for long Option
+ */
+public static final String DEFAULT_LONG_OPT_PREFIX = "--";
+/**
+ * default name for an argument
+ */
+public static final String DEFAULT_ARG_NAME = "arg";
+public void setWidth(int width);
+public int getWidth();
+public void setLeftPadding(int padding);
+public int getLeftPadding();
+public void setDescPadding(int padding);
+public int getDescPadding();
+public void setSyntaxPrefix(String prefix);
+public String getSyntaxPrefix();
+public void setNewLine(String newline);
+public String getNewLine();
+public void setOptPrefix(String prefix);
+public String getOptPrefix();
+public void setLongOptPrefix(String prefix);
+public String getLongOptPrefix();
+public void setArgName(String name);
+public String getArgName();
+public void printHelp(String cmdLineSyntax, Options options);
+public void printHelp(String cmdLineSyntax, Options options, boolean autoUsage);
+public void printHelp(String cmdLineSyntax, String header, Options options, String footer);
+public void printHelp(String cmdLineSyntax, String header, Options options, String footer, boolean autoUsage);
+public void printHelp(int width, String cmdLineSyntax, String header, Options options, String footer);
+public void printHelp(int width, String cmdLineSyntax, String header, Options options, String footer, boolean autoUsage);
+public void printHelp(PrintWriter pw, int width, String cmdLineSyntax, String header, Options options, int leftPad, int descPad, String footer);
+public void printHelp(PrintWriter pw, int width, String cmdLineSyntax, String header, Options options, int leftPad, int descPad, String footer, boolean autoUsage);
+public void printUsage(PrintWriter pw, int width, String app, Options options);
+public void printUsage(PrintWriter pw, int width, String cmdLineSyntax);
+public void printOptions(PrintWriter pw, int width, Options options, int leftPad, int descPad);
+public void printWrapped(PrintWriter pw, int width, String text);
+public void printWrapped(PrintWriter pw, int width, int nextLineTabStop, String text);
+protected StringBuffer renderOptions(StringBuffer sb, int width, Options options, int leftPad, int descPad);
+protected StringBuffer renderWrappedText(StringBuffer sb, int width, int nextLineTabStop, String text);
+protected int findWrapPos(String text, int width, int startPos);
+protected String createPadding(int len);
+protected String rtrim(String s);
+
+Type MissingArgumentException
+extends [ParseException] implements []
+public MissingArgumentException(String message);
+
+Type MissingOptionException
+extends [ParseException] implements []
+public MissingOptionException(String message);
+
+Type Option
+extends [] implements []
+/**
+ * constant that specifies the number of argument values has
+ *        not been specified
+ */
+public static final int UNINITIALIZED = -1;
+/**
+ * constant that specifies the number of argument values is infinite
+ */
+public static final int UNLIMITED_VALUES = -2;
+public Option(String opt, String description) throws IllegalArgumentException;
+public Option(String opt, boolean hasArg, String description) throws IllegalArgumentException;
+public Option(String opt, String longOpt, boolean hasArg, String description) throws IllegalArgumentException;
+public int getId();
+ String getKey();
+public String getOpt();
+public Object getType();
+public void setType(Object type);
+public String getLongOpt();
+public void setLongOpt(String longOpt);
+public void setOptionalArg(boolean optionalArg);
+public boolean hasOptionalArg();
+public boolean hasLongOpt();
+public boolean hasArg();
+public String getDescription();
+public void setDescription(String description);
+public boolean isRequired();
+public void setRequired(boolean required);
+public void setArgName(String argName);
+public String getArgName();
+public boolean hasArgName();
+public boolean hasArgs();
+public void setArgs(int num);
+public void setValueSeparator(char sep);
+public char getValueSeparator();
+public boolean hasValueSeparator();
+public int getArgs();
+ void addValue(String value);
+public String getValue();
+public String getValue(int index) throws IndexOutOfBoundsException;
+public String getValue(String defaultValue);
+public String[] getValues();
+public java.util.List getValuesList();
+public String toString();
+public boolean equals(Object o);
+public int hashCode();
+
+Type OptionBuilder
+extends [] implements []
+public static OptionBuilder withLongOpt(String newLongopt);
+public static OptionBuilder hasArg();
+public static OptionBuilder hasArg(boolean hasArg);
+public static OptionBuilder withArgName(String name);
+public static OptionBuilder isRequired();
+public static OptionBuilder withValueSeparator(char sep);
+public static OptionBuilder withValueSeparator();
+public static OptionBuilder isRequired(boolean newRequired);
+public static OptionBuilder hasArgs();
+public static OptionBuilder hasArgs(int num);
+public static OptionBuilder hasOptionalArg();
+public static OptionBuilder hasOptionalArgs();
+public static OptionBuilder hasOptionalArgs(int numArgs);
+public static OptionBuilder withType(Object newType);
+public static OptionBuilder withDescription(String newDescription);
+public static Option create(char opt) throws IllegalArgumentException;
+public static Option create() throws IllegalArgumentException;
+public static Option create(String opt) throws IllegalArgumentException;
+
+Type OptionGroup
+extends [] implements []
+public OptionGroup addOption(Option opt);
+public Collection getNames();
+public Collection getOptions();
+public void setSelected(Option opt) throws AlreadySelectedException;
+public String getSelected();
+public void setRequired(boolean required);
+public boolean isRequired();
+public String toString();
+
+Type OptionValidator
+extends [] implements []
+ static void validateOption(String opt) throws IllegalArgumentException;
+
+Type Options
+extends [] implements []
+public Options();
+public Options addOptionGroup(OptionGroup group);
+ Collection getOptionGroups();
+public Options addOption(String opt, boolean hasArg, String description);
+public Options addOption(String opt, String longOpt, boolean hasArg, String description);
+public Options addOption(Option opt);
+public Collection getOptions();
+ List helpOptions();
+public List getRequiredOptions();
+public Option getOption(String opt);
+public boolean hasOption(String opt);
+public OptionGroup getOptionGroup(Option opt);
+public String toString();
+
+Type ParseException
+extends [Exception] implements []
+public ParseException(String message);
+
+Type Parser
+extends [] implements [CommandLineParser]
+protected abstract String[] flatten(Options opts, String[] arguments, boolean stopAtNonOption);
+public CommandLine parse(Options options, String[] arguments) throws ParseException;
+public CommandLine parse(Options options, String[] arguments, Properties properties) throws ParseException;
+public CommandLine parse(Options options, String[] arguments, boolean stopAtNonOption) throws ParseException;
+public CommandLine parse(Options options, String[] arguments, Properties properties, boolean stopAtNonOption) throws ParseException;
+public void processArgs(Option opt, ListIterator iter) throws ParseException;
+
+Type PatternOptionBuilder
+extends [] implements []
+/**
+ * String class
+ */
+public static final Class STRING_VALUE = java.lang.String.class;
+/**
+ * Object class
+ */
+public static final Class OBJECT_VALUE = java.lang.Object.class;
+/**
+ * Number class
+ */
+public static final Class NUMBER_VALUE = java.lang.Number.class;
+/**
+ * Date class
+ */
+public static final Class DATE_VALUE = java.util.Date.class;
+/**
+ * Class class
+ */
+public static final Class CLASS_VALUE = java.lang.Class.class;
+/// can we do this one??
+// is meant to check that the file exists, else it errors.
+// ie) it's for reading not writing.
+/**
+ * FileInputStream class
+ */
+public static final Class EXISTING_FILE_VALUE = java.io.FileInputStream.class;
+/**
+ * File class
+ */
+public static final Class FILE_VALUE = java.io.File.class;
+/**
+ * File array class
+ */
+public static final Class FILES_VALUE = java.io.File[].class;
+/**
+ * URL class
+ */
+public static final Class URL_VALUE = java.net.URL.class;
+public static Object getValueClass(char ch);
+public static boolean isValueCode(char ch);
+public static Options parsePattern(String pattern);
+
+Type PosixParser
+extends [Parser] implements []
+protected String[] flatten(Options options, String[] arguments, boolean stopAtNonOption);
+protected void burstToken(String token, boolean stopAtNonOption);
+
+Type TypeHandler
+extends [] implements []
+public static Object createValue(String str, Object obj);
+public static Object createValue(String str, Class clazz);
+public static Object createObject(String str);
+public static Number createNumber(String str);
+public static Class createClass(String str);
+public static Date createDate(String str);
+public static URL createURL(String str);
+public static File createFile(String str);
+public static File[] createFiles(String str);
+
+Type UnrecognizedOptionException
+extends [ParseException] implements []
+public UnrecognizedOptionException(String message);
+
+Type Util
+extends [] implements []
+ static String stripLeadingHyphens(String str);
+ static String stripLeadingAndTrailingQuotes(String str);
+

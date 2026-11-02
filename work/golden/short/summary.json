@@ -1,0 +1,71 @@
+{
+  "scope": "shortCircuit",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 17,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L8",
+        "L9"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 2,
+      "total": 3,
+      "percent": 66.66666666666667,
+      "covered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:statement1",
+        "TeachingExamples#shortCircuit(int,int)@7:statement3"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:statement2"
+      ]
+    },
+    "block": {
+      "covered": 2,
+      "total": 3,
+      "percent": 66.66666666666667,
+      "covered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:block1",
+        "TeachingExamples#shortCircuit(int,int)@7:block3"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:block2"
+      ]
+    },
+    "decision": {
+      "covered": 1,
+      "total": 2,
+      "percent": 50.0,
+      "covered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:decision1:F"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:decision1:T"
+      ]
+    },
+    "condition": {
+      "covered": 3,
+      "total": 4,
+      "percent": 75.0,
+      "covered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:condition1:F",
+        "TeachingExamples#shortCircuit(int,int)@7:condition1:T",
+        "TeachingExamples#shortCircuit(int,int)@7:condition2:F"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#shortCircuit(int,int)@7:condition2:T"
+      ]
+    },
+    "condition_decision": {
+      "covered": 4,
+      "total": 6,
+      "percent": 66.66666666666667
+    }
+  }
+}

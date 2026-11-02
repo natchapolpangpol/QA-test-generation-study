@@ -1,0 +1,17 @@
+You are a test generator in a controlled experiment. Do not use tools, inspect files,
+search the web, execute code, or modify the environment. All permitted context is below.
+Return JSON matching the response schema, with java_source containing only a complete
+JUnit 4.13.2 test class named GeneratedTest, with no package declaration.
+Target Java 11. Do not mock the target. Include concrete assertions based on the given
+reference implementation. Cover both decision outcomes and all feasible atomic condition
+outcomes, including short-circuit cases. You may use only Java and JUnit 4 imports.
+Do not assume any project or bug identity. Do not create production code or helper files.
+
+Reference production class (the tested method is public and static):
+
+public class AiTarget {
+    public static int classify(int a, int b) {
+        if (a > 10 && b > 20) { return 1; }
+        return 0;
+    }
+}

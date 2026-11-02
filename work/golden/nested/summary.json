@@ -1,0 +1,70 @@
+{
+  "scope": "nestedConditions",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 27,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L36",
+        "L37"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:statement1",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:statement2",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:statement3"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block1",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block2",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:decision1:F",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 5,
+      "total": 6,
+      "percent": 83.33333333333333,
+      "covered_ids": [
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition1:F",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition1:T",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition2:F",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition2:T",
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition3:T"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:condition3:F"
+      ]
+    },
+    "condition_decision": {
+      "covered": 7,
+      "total": 8,
+      "percent": 87.5
+    }
+  }
+}

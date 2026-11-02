@@ -1,0 +1,31 @@
+* EvoSuite 1.2.0
+* Going to generate test cases for class: AiTarget
+* Starting Client-0
+* Connecting to master process on port 19615
+* Analyzing classpath: 
+  - work/smoke-target
+* Finished analyzing classpath
+* Generating tests for class AiTarget
+* Test criterion:
+  - Branch Coverage
+[Progress:>                             0%] [Cov:>                                  0%]* Total number of test goals for DYNAMOSA: 5
+* Using seed 101
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 3 / 5
+[Progress:>                             0%] [Cov:===================================100%]
+* Search finished after 1s and 0 generations, 1054 statements, best individual has fitness: 0.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Generated 4 tests with total length 4
+* Resulting test suite's coverage: 100%
+* Generating assertions
+* Compiling and checking tests
+* Writing tests to file
+* Writing JUnit test case 'AiTarget_ESTest' to work/runs/dynamosa-smoke-001/tests
+* Done!
+
+* Computation finished

@@ -1,0 +1,24 @@
+JUnit version 4.13.2
+.E..E
+Time: 0.123
+There were 2 failures:
+1) returnsZeroWhenSecondConditionIsFalse(GeneratedTest)
+java.lang.AssertionError: expected:<0> but was:<1>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at GeneratedTest.returnsZeroWhenSecondConditionIsFalse(GeneratedTest.java:17)
+2) returnsZeroWhenFirstConditionIsFalse(GeneratedTest)
+java.lang.AssertionError: expected:<0> but was:<1>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
+	at GeneratedTest.returnsZeroWhenFirstConditionIsFalse(GeneratedTest.java:12)
+
+FAILURES!!!
+Tests run: 3,  Failures: 2
+
+
+STDERR:

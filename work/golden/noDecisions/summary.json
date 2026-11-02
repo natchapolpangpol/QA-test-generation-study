@@ -1,0 +1,54 @@
+{
+  "scope": "emptyItems",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 3,
+  "metrics": {
+    "line": {
+      "covered": 1,
+      "total": 1,
+      "percent": 100.0,
+      "covered_ids": [
+        "L48"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 1,
+      "total": 1,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#emptyItems()@47:statement1"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 1,
+      "total": 1,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#emptyItems()@47:block1"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 0,
+      "total": 0,
+      "percent": null,
+      "covered_ids": [],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 0,
+      "total": 0,
+      "percent": null,
+      "covered_ids": [],
+      "uncovered_ids": []
+    },
+    "condition_decision": {
+      "covered": 0,
+      "total": 0,
+      "percent": null
+    }
+  }
+}

@@ -1,0 +1,5 @@
+1	1	statement	FlowExamples#conditionThrows(Boolean)@26:statement1
+2	1	line	L27
+3	1	block	FlowExamples#conditionThrows(Boolean)@26:block1
+4	1	statement	FlowExamples#conditionThrows(Boolean)@26:statement2
+5	1	line	L27

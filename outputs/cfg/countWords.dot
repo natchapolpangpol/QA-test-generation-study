@@ -1,0 +1,26 @@
+digraph coverage {
+  "TeachingExamples#countWords(String)@11:EXIT" [label="TeachingExamples#countWords(String)@11:EXIT\nexit"];
+  "TeachingExamples#countWords(String)@11:block1" [label="TeachingExamples#countWords(String)@11:block1\nprocess"];
+  "TeachingExamples#countWords(String)@11:block2" [label="TeachingExamples#countWords(String)@11:block2\ndecision"];
+  "TeachingExamples#countWords(String)@11:block3" [label="TeachingExamples#countWords(String)@11:block3\nprocess"];
+  "TeachingExamples#countWords(String)@11:block4" [label="TeachingExamples#countWords(String)@11:block4\ndecision"];
+  "TeachingExamples#countWords(String)@11:block5" [label="TeachingExamples#countWords(String)@11:block5\nfor-update"];
+  "TeachingExamples#countWords(String)@11:block6" [label="TeachingExamples#countWords(String)@11:block6\nprocess"];
+  "TeachingExamples#countWords(String)@11:block7" [label="TeachingExamples#countWords(String)@11:block7\ndecision"];
+  "TeachingExamples#countWords(String)@11:block8" [label="TeachingExamples#countWords(String)@11:block8\nprocess"];
+  "TeachingExamples#countWords(String)@11:block9" [label="TeachingExamples#countWords(String)@11:block9\nfor-init"];
+  "TeachingExamples#countWords(String)@11:block10" [label="TeachingExamples#countWords(String)@11:block10\nprocess"];
+  "TeachingExamples#countWords(String)@11:block1" -> "TeachingExamples#countWords(String)@11:EXIT" [label="next"];
+  "TeachingExamples#countWords(String)@11:block3" -> "TeachingExamples#countWords(String)@11:block1" [label="next"];
+  "TeachingExamples#countWords(String)@11:block2" -> "TeachingExamples#countWords(String)@11:block3" [label="T"];
+  "TeachingExamples#countWords(String)@11:block2" -> "TeachingExamples#countWords(String)@11:block1" [label="F"];
+  "TeachingExamples#countWords(String)@11:block5" -> "TeachingExamples#countWords(String)@11:block4" [label="next"];
+  "TeachingExamples#countWords(String)@11:block6" -> "TeachingExamples#countWords(String)@11:block5" [label="next"];
+  "TeachingExamples#countWords(String)@11:block8" -> "TeachingExamples#countWords(String)@11:block6" [label="next"];
+  "TeachingExamples#countWords(String)@11:block7" -> "TeachingExamples#countWords(String)@11:block8" [label="T"];
+  "TeachingExamples#countWords(String)@11:block7" -> "TeachingExamples#countWords(String)@11:block6" [label="F"];
+  "TeachingExamples#countWords(String)@11:block4" -> "TeachingExamples#countWords(String)@11:block7" [label="T"];
+  "TeachingExamples#countWords(String)@11:block4" -> "TeachingExamples#countWords(String)@11:block2" [label="F"];
+  "TeachingExamples#countWords(String)@11:block9" -> "TeachingExamples#countWords(String)@11:block4" [label="next"];
+  "TeachingExamples#countWords(String)@11:block10" -> "TeachingExamples#countWords(String)@11:block9" [label="next"];
+}

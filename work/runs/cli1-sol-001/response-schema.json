@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"java_source": {"type": "string"}}, "required": ["java_source"], "additionalProperties": false}

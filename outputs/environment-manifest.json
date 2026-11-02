@@ -1,0 +1,159 @@
+{
+  "captured_utc": "2026-11-02T09:48:28.324797+00:00",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "python": "3.14.4",
+  "java": {
+    "exit_code": 0,
+    "text": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1-post-1ubuntu1-26.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1-post-1ubuntu1-26.04-Ubuntu, mixed mode, sharing)"
+  },
+  "javac": {
+    "exit_code": 0,
+    "text": "javac 11.0.32.1"
+  },
+  "git": {
+    "exit_code": 0,
+    "text": "git version 2.53.0"
+  },
+  "defects4j_commit": {
+    "exit_code": 0,
+    "text": "8c16da8230843cdc918eaf4ddb449637f02b83c6"
+  },
+  "artifacts": [
+    {
+      "path": "work/dependencies/evosuite-1.2.0.jar",
+      "bytes": 19766471,
+      "sha256": "0bc0062fdec70c35089ad736c9b88ccf87308c2f0aaaafe43176f3c4a89ddeba"
+    },
+    {
+      "path": "work/dependencies/evosuite-standalone-runtime-1.2.0.jar",
+      "bytes": 7374608,
+      "sha256": "cc856a6d02b391367d2a4516346c699c67e4b4a370203471df1f3d78b46b74dc"
+    },
+    {
+      "path": "work/dependencies/hamcrest-core-1.3.jar",
+      "bytes": 45024,
+      "sha256": "66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
+    },
+    {
+      "path": "work/dependencies/javaparser-core-3.26.3.jar",
+      "bytes": 1440275,
+      "sha256": "a24c4fa7799ffe0c7a9af11d4eecd757098ed4498f86067bf28b46b2bfea1833"
+    },
+    {
+      "path": "work/dependencies/junit-4.13.2.jar",
+      "bytes": 384581,
+      "sha256": "8e495b634469d64fb8acfa3495a065cbacc8a0fff55ce1e31007be4c16dc57d3"
+    }
+  ],
+  "implementation_sources": [
+    {
+      "path": "src/environment/build_progress_report.py",
+      "sha256": "bcd162a2c4cededd5199326dac8f67919086ff5e93891bf0c8fd8f4cd64bb931"
+    },
+    {
+      "path": "src/environment/extract_repos_windows.py",
+      "sha256": "5b7cf21a1c70842b1fa2a2d985ae51f9bedf215f65e89c7151e6269efe63e608"
+    },
+    {
+      "path": "src/environment/fingerprint.py",
+      "sha256": "6c89fd9dce6384c1d2c949a49222eb142c9a0723473b7c3ae30c3f96040887e8"
+    },
+    {
+      "path": "src/environment/finish_setup_windows.py",
+      "sha256": "b021c50989037f182517e32073373e0055b724b4bd618dbdbc8be81771347994"
+    },
+    {
+      "path": "src/environment/pilot_baseline.py",
+      "sha256": "4de97c81c70045dad70c263e5c005d6eae1005182ccfcf0478851789441be741"
+    },
+    {
+      "path": "src/evaluation/class_replay.py",
+      "sha256": "26db03ee54899292346c7ba777475cf71aedc32e94825d8fbebd4c9793c9247c"
+    },
+    {
+      "path": "src/evaluation/evaluate_cli_pilot.py",
+      "sha256": "0cfb6b9d4bddab2d833c0aed8c75b6f7935bc0f979fae4cd10d98573a39dfdb6"
+    },
+    {
+      "path": "src/evaluation/prepare_cli_pilot.py",
+      "sha256": "b6ddbca8810aa4bca076f6a0f47f75bffa35609bed960460130b90bbf3d91398"
+    },
+    {
+      "path": "src/evaluation/report_cli_pilot.py",
+      "sha256": "6e2e007e9a49360c2b544319734cb3bc9e6a8e8af1ea13e79227ef5162ca7d73"
+    },
+    {
+      "path": "src/generators/codex_runner.py",
+      "sha256": "d299835b1ecb4106a1ed1dfd51e5fe61d100cc5b65bf74a87735ee7ee55de0a9"
+    },
+    {
+      "path": "src/generators/evosuite_runner.py",
+      "sha256": "2eacf396892a8260c0b81bcdae8fe189107bf5ada5ae6b26f1eed3c1d97a1675"
+    },
+    {
+      "path": "src/measurement/ApiContext.java",
+      "sha256": "0e4ed57c730a936545ebe1ff7bac9b1952bff9b9c77b9538d5236474a4b0d1bf"
+    },
+    {
+      "path": "src/measurement/Audit.java",
+      "sha256": "feaccd6c13dbacf6421d8bbdc49514511e94f06069df48380392b881da35d60d"
+    },
+    {
+      "path": "src/measurement/Instrument.java",
+      "sha256": "9a6ca9a5692847ec98eb313c481ac6b59415c6f34dd0f85450945b37ecdad0a3"
+    },
+    {
+      "path": "src/measurement/Trace.java",
+      "sha256": "e87003dc8bfc25f9c409f1a3af09698830590e45c6cf7b697b4ba482d7fd8a83"
+    },
+    {
+      "path": "src/measurement/aggregate.py",
+      "sha256": "a7e6a51b84c248488c57c00b17ae324db82061ee6a257d93d0ae7c9edb393730"
+    },
+    {
+      "path": "src/run.ps1",
+      "sha256": "f51b5b21518b8a94236485c29a2d13df49bdb3976bc52d89c9805d4c68e32ad0"
+    },
+    {
+      "path": "tests/golden/AiTarget.java",
+      "sha256": "5dce89da9220bd7f1b01b938c25eb20886cb970c30edb7e4b7400625438fa575"
+    },
+    {
+      "path": "tests/golden/FlowExamples.java",
+      "sha256": "d354d979915c5c7d915edd43eb793f0bd7e1c05d34451176b87a510be1ac9339"
+    },
+    {
+      "path": "tests/golden/FlowRunner.java",
+      "sha256": "8ee17377cf0d707e7276a330d057b024fd97d2b942ac61521467897d1b04c1fc"
+    },
+    {
+      "path": "tests/golden/GoldenRunner.java",
+      "sha256": "cd7383e0ed7ff89613d8e71d8ce062af10a348c79572de9bb9bacdbde3559fdf"
+    },
+    {
+      "path": "tests/golden/RejectedTernary.java",
+      "sha256": "6e524fb6b995cfd9b6896f7cea45682282ba7d5235a86ebbf1fb0dfbc93a9f2e"
+    },
+    {
+      "path": "tests/golden/TeachingExamples.java",
+      "sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419"
+    },
+    {
+      "path": "tests/golden/ai-smoke-prompt.txt",
+      "sha256": "1a6c0c93bd2e5f8dff9716c7ecb2ef65f5c2889205af7130eac667aa0bc05f67"
+    },
+    {
+      "path": "tests/run_flow.py",
+      "sha256": "d2cb9e000a89c9d6524372126fb071e6d4a8a2a26c57aa1baec20896ac832a27"
+    },
+    {
+      "path": "tests/run_golden.py",
+      "sha256": "ada389400ac6aac62bb26ae2722872b91bdbecc0fa0ef88a19e654cbcfe3b87a"
+    },
+    {
+      "path": "tests/validate_smoke.py",
+      "sha256": "89305ef8a9f8058e66406fbfacd62f22b83a0f2c8aa1ab653e4c3e1a4075beaa"
+    }
+  ],
+  "no_credentials_recorded": true
+}

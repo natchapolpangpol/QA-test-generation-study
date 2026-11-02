@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#shortCircuit(int,int)@7:EXIT" [label="TeachingExamples#shortCircuit(int,int)@7:EXIT\nexit"];
+  "TeachingExamples#shortCircuit(int,int)@7:block1" [label="TeachingExamples#shortCircuit(int,int)@7:block1\ndecision"];
+  "TeachingExamples#shortCircuit(int,int)@7:block2" [label="TeachingExamples#shortCircuit(int,int)@7:block2\nprocess"];
+  "TeachingExamples#shortCircuit(int,int)@7:block3" [label="TeachingExamples#shortCircuit(int,int)@7:block3\nprocess"];
+  "TeachingExamples#shortCircuit(int,int)@7:block2" -> "TeachingExamples#shortCircuit(int,int)@7:EXIT" [label="next"];
+  "TeachingExamples#shortCircuit(int,int)@7:block1" -> "TeachingExamples#shortCircuit(int,int)@7:block2" [label="T"];
+  "TeachingExamples#shortCircuit(int,int)@7:block3" -> "TeachingExamples#shortCircuit(int,int)@7:EXIT" [label="next"];
+  "TeachingExamples#shortCircuit(int,int)@7:block1" -> "TeachingExamples#shortCircuit(int,int)@7:block3" [label="F"];
+}

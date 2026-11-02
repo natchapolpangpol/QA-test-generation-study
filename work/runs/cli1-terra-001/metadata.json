@@ -1,0 +1,50 @@
+{
+  "model_requested": "gpt-6.1-terra",
+  "surface": "Codex CLI with ChatGPT subscription",
+  "phase": "exploratory pilot; not main study",
+  "reasoning_effort": "low",
+  "started_utc": "2026-11-02T09:35:21.650918+00:00",
+  "prompt_sha256": "b82c223b39f95e3a1003fc5318b94e0bd7e7c80f16497c9b9da6c69d889d8a91",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "C:\\Users\\NATCHAPOL\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\bin\\codex.js",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-terra",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-c",
+    "web_search=\"disabled\"",
+    "--cd",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\cli1-terra-001\\context",
+    "--output-schema",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\cli1-terra-001\\response-schema.json",
+    "--output-last-message",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\cli1-terra-001\\response.json",
+    "--json",
+    "-"
+  ],
+  "cli_version": "codex-cli 0.162.0",
+  "exit_code": 0,
+  "item_types": [
+    "agent_message"
+  ],
+  "tool_events": [],
+  "usage": [
+    {
+      "input_tokens": 16112,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1293,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "status": "generated_not_yet_validated",
+  "suite_sha256": "5b8e0b1d64d87ea507808e28a4c72a5b6d713ccf621191eb66c09235177618de",
+  "elapsed_seconds": 16.453
+}

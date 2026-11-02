@@ -1,0 +1,6 @@
+Failing tests: 1
+  - org.apache.commons.cli.bug.BugCLI13Test::testCLI13
+
+STDERR:
+Running ant (compile.tests)................................................ OK
+Running ant (run.dev.tests)................................................ OK

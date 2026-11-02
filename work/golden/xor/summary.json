@@ -1,0 +1,68 @@
+{
+  "scope": "booleanXor",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 18,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L44",
+        "L45"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#booleanXor(boolean,boolean)@43:statement1",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:statement2",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:statement3"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#booleanXor(boolean,boolean)@43:block1",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:block2",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#booleanXor(boolean,boolean)@43:decision1:F",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 3,
+      "total": 4,
+      "percent": 75.0,
+      "covered_ids": [
+        "TeachingExamples#booleanXor(boolean,boolean)@43:condition1:T",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:condition2:F",
+        "TeachingExamples#booleanXor(boolean,boolean)@43:condition2:T"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#booleanXor(boolean,boolean)@43:condition1:F"
+      ]
+    },
+    "condition_decision": {
+      "covered": 5,
+      "total": 6,
+      "percent": 83.33333333333333
+    }
+  }
+}

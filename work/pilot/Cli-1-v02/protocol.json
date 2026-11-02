@@ -1,0 +1,27 @@
+{
+  "phase": "exploratory pilot; not main study",
+  "project": "Cli",
+  "bug_id": 1,
+  "target": "org.apache.commons.cli.CommandLine",
+  "generation_revision": "fixed",
+  "measurement_scope": "17 declared method bodies; constructors/field initializers excluded explicitly",
+  "prompt_sha256": "b82c223b39f95e3a1003fc5318b94e0bd7e7c80f16497c9b9da6c69d889d8a91",
+  "target_sha256": "4000f382a138b952dbfc784318dbff32d21219c6b04ca5f22ee37396da944d35",
+  "algorithms": [
+    "DYNAMOSA",
+    "MIO"
+  ],
+  "search_budget_seconds": 60,
+  "seeds": [
+    101
+  ],
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6.1-terra"
+  ],
+  "model_generations": 1,
+  "repairs": 0,
+  "no_buggy_feedback_to_generators": true,
+  "no_benchmark_tests_in_prompts": true,
+  "interpretation": "workflow feasibility only; unequal generation budgets and one repeat do not establish a winner"
+}

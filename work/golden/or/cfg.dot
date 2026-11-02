@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#eagerOr(boolean,boolean)@39:EXIT" [label="TeachingExamples#eagerOr(boolean,boolean)@39:EXIT\nexit"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block1" [label="TeachingExamples#eagerOr(boolean,boolean)@39:block1\nprocess"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block2" [label="TeachingExamples#eagerOr(boolean,boolean)@39:block2\ndecision"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block3" [label="TeachingExamples#eagerOr(boolean,boolean)@39:block3\nprocess"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block1" -> "TeachingExamples#eagerOr(boolean,boolean)@39:EXIT" [label="next"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block3" -> "TeachingExamples#eagerOr(boolean,boolean)@39:EXIT" [label="next"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block2" -> "TeachingExamples#eagerOr(boolean,boolean)@39:block3" [label="T"];
+  "TeachingExamples#eagerOr(boolean,boolean)@39:block2" -> "TeachingExamples#eagerOr(boolean,boolean)@39:block1" [label="F"];
+}

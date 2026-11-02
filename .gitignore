@@ -1,0 +1,24 @@
+# Local teaching materials and transferable dependencies live in migration ZIP.
+/inputs/
+/work/*
+!/work/implementation-decisions.json
+!/work/runs/
+!/work/pilot/
+!/work/baseline/
+!/work/class-replay/
+!/work/flow/
+!/work/golden/
+/outputs/migration/
+__pycache__/
+*.pyc
+*.class
+.env
+.env.*
+!.env.example
+.codex/
+auth.json
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+/TRANSFER_CONTENTS.json

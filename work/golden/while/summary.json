@@ -1,0 +1,68 @@
+{
+  "scope": "whileLoop",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 46,
+  "metrics": {
+    "line": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "L31",
+        "L32",
+        "L33"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#whileLoop(int)@30:statement1",
+        "TeachingExamples#whileLoop(int)@30:statement2",
+        "TeachingExamples#whileLoop(int)@30:statement3",
+        "TeachingExamples#whileLoop(int)@30:statement4"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#whileLoop(int)@30:block1",
+        "TeachingExamples#whileLoop(int)@30:block2",
+        "TeachingExamples#whileLoop(int)@30:block3",
+        "TeachingExamples#whileLoop(int)@30:block4"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#whileLoop(int)@30:decision1:F",
+        "TeachingExamples#whileLoop(int)@30:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#whileLoop(int)@30:condition1:F",
+        "TeachingExamples#whileLoop(int)@30:condition1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition_decision": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0
+    }
+  }
+}

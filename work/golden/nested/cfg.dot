@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:EXIT" [label="TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:EXIT\nexit"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block1" [label="TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block1\nprocess"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block2" [label="TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block2\ndecision"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block3" [label="TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block3\nprocess"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block1" -> "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:EXIT" [label="next"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block3" -> "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:EXIT" [label="next"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block2" -> "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block3" [label="T"];
+  "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block2" -> "TeachingExamples#nestedConditions(boolean,boolean,boolean)@35:block1" [label="F"];
+}

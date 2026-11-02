@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#sideEffects(boolean,boolean)@22:EXIT" [label="TeachingExamples#sideEffects(boolean,boolean)@22:EXIT\nexit"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block1" [label="TeachingExamples#sideEffects(boolean,boolean)@22:block1\nprocess"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block2" [label="TeachingExamples#sideEffects(boolean,boolean)@22:block2\ndecision"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block3" [label="TeachingExamples#sideEffects(boolean,boolean)@22:block3\nprocess"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block1" -> "TeachingExamples#sideEffects(boolean,boolean)@22:EXIT" [label="next"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block3" -> "TeachingExamples#sideEffects(boolean,boolean)@22:EXIT" [label="next"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block2" -> "TeachingExamples#sideEffects(boolean,boolean)@22:block3" [label="T"];
+  "TeachingExamples#sideEffects(boolean,boolean)@22:block2" -> "TeachingExamples#sideEffects(boolean,boolean)@22:block1" [label="F"];
+}

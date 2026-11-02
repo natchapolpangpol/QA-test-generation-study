@@ -1,0 +1,18 @@
+method	line	syntax_status	name_selector_ambiguous	detail
+boolean hasOption(String)	65	supported_by_prototype_validator	true	Still requires compile and semantic validation
+boolean hasOption(char)	76	supported_by_prototype_validator	true	Still requires compile and semantic validation
+Object getOptionObject(String)	87	unsupported	true	Unsupported nested expression ConditionalExpr
+Object getOptionObject(char)	108	supported_by_prototype_validator	true	Still requires compile and semantic validation
+String getOptionValue(String)	120	unsupported	true	Unsupported nested expression ConditionalExpr
+String getOptionValue(char)	134	supported_by_prototype_validator	true	Still requires compile and semantic validation
+String[] getOptionValues(String)	146	supported_by_prototype_validator	true	Still requires compile and semantic validation
+Option resolveOption(String)	163	supported_by_prototype_validator	false	Still requires compile and semantic validation
+String[] getOptionValues(char)	189	supported_by_prototype_validator	true	Still requires compile and semantic validation
+String getOptionValue(String, String)	203	unsupported	true	Unsupported nested expression ConditionalExpr
+String getOptionValue(char, String)	219	supported_by_prototype_validator	true	Still requires compile and semantic validation
+String[] getArgs()	229	supported_by_prototype_validator	false	Still requires compile and semantic validation
+List getArgList()	243	supported_by_prototype_validator	false	Still requires compile and semantic validation
+void addArg(String)	275	supported_by_prototype_validator	false	Still requires compile and semantic validation
+void addOption(Option)	286	supported_by_prototype_validator	false	Still requires compile and semantic validation
+Iterator iterator()	297	supported_by_prototype_validator	false	Still requires compile and semantic validation
+Option[] getOptions()	307	supported_by_prototype_validator	false	Still requires compile and semantic validation

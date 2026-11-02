@@ -1,0 +1,225 @@
+{
+  "phase": "environment baseline, not generator study",
+  "project": "Cli",
+  "bug_id": 1,
+  "started_utc": "2026-11-02T09:14:43.121238+00:00",
+  "timezone": "America/Los_Angeles",
+  "revisions": {
+    "f": {
+      "path": "work/checkouts/Cli-1f",
+      "steps": [
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "checkout",
+            "-p",
+            "Cli",
+            "-v",
+            "1f",
+            "-w",
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 23.618,
+          "log": "work/baseline/Cli-1/f-checkout.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "classes.modified"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.903,
+          "log": "work/baseline/Cli-1/f-classes.modified.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "tests.trigger"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.771,
+          "log": "work/baseline/Cli-1/f-tests.trigger.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "dir.src.classes"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.762,
+          "log": "work/baseline/Cli-1/f-dir.src.classes.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "dir.bin.classes"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.475,
+          "log": "work/baseline/Cli-1/f-dir.bin.classes.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "cp.test"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 11.467,
+          "log": "work/baseline/Cli-1/f-cp.test.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "compile"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 15.139,
+          "log": "work/baseline/Cli-1/f-compile.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "test"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 17.729,
+          "log": "work/baseline/Cli-1/f-test.log"
+        }
+      ],
+      "classes.modified": "org.apache.commons.cli.CommandLine",
+      "tests.trigger": "org.apache.commons.cli.bug.BugCLI13Test::testCLI13",
+      "dir.src.classes": "src/java",
+      "dir.bin.classes": "target/classes",
+      "cp.test": "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f/target/lib/commons-lang/jars/commons-lang-2.1.jar:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f/target/lib/junit/jars/junit-3.8.1.jar:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f/target/classes:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f/target/test-classes",
+      "failing_tests": 0,
+      "test_process_exit_code": 0,
+      "failure_details": ""
+    },
+    "b": {
+      "path": "work/checkouts/Cli-1b",
+      "steps": [
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "checkout",
+            "-p",
+            "Cli",
+            "-v",
+            "1b",
+            "-w",
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1b"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 21.443,
+          "log": "work/baseline/Cli-1/b-checkout.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "classes.modified"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 4.49,
+          "log": "work/baseline/Cli-1/b-classes.modified.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "tests.trigger"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 5.748,
+          "log": "work/baseline/Cli-1/b-tests.trigger.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "dir.src.classes"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 6.328,
+          "log": "work/baseline/Cli-1/b-dir.src.classes.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "dir.bin.classes"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 6.025,
+          "log": "work/baseline/Cli-1/b-dir.bin.classes.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "export",
+            "-p",
+            "cp.test"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 9.68,
+          "log": "work/baseline/Cli-1/b-cp.test.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "compile"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 15.355,
+          "log": "work/baseline/Cli-1/b-compile.log"
+        },
+        {
+          "command": [
+            "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+            "test"
+          ],
+          "exit_code": 0,
+          "elapsed_seconds": 20.184,
+          "log": "work/baseline/Cli-1/b-test.log"
+        }
+      ],
+      "classes.modified": "org.apache.commons.cli.CommandLine",
+      "tests.trigger": "org.apache.commons.cli.bug.BugCLI13Test::testCLI13",
+      "dir.src.classes": "src/java",
+      "dir.bin.classes": "target/classes",
+      "cp.test": "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1b/target/lib/commons-lang/jars/commons-lang-2.1.jar:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1b/target/lib/junit/jars/junit-3.8.1.jar:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1b/target/classes:/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1b/target/test-classes",
+      "failing_tests": 1,
+      "test_process_exit_code": 0,
+      "failure_details": "--- org.apache.commons.cli.bug.BugCLI13Test::testCLI13\njunit.framework.AssertionFailedError\n\tat junit.framework.Assert.fail(Assert.java:55)\n\tat junit.framework.Assert.assertTrue(Assert.java:22)\n\tat junit.framework.Assert.assertTrue(Assert.java:31)\n\tat junit.framework.TestCase.assertTrue(TestCase.java:201)\n\tat org.apache.commons.cli.bug.BugCLI13Test.testCLI13(BugCLI13Test.java:50)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat junit.framework.TestCase.runTest(TestCase.java:176)\n\tat junit.framework.TestCase.runBare(TestCase.java:141)\n\tat junit.framework.TestResult$1.protect(TestResult.java:122)\n\tat junit.framework.TestResult.runProtected(TestResult.java:142)\n\tat junit.framework.TestResult.run(TestResult.java:125)\n\tat junit.framework.TestCase.run(TestCase.java:129)\n\tat junit.framework.TestSuite.runTest(TestSuite.java:252)\n\tat junit.framework.TestSuite.run(TestSuite.java:247)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:520)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeInVM(JUnitTask.java:1492)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeTests(JUnitTask.java:878)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeOrQueue(JUnitTask.java:1980)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.executeTests(JUnitTask.java:830)\n\tat org.apache.tools.ant.taskdefs.optional.junit.JUnitTask.execute(JUnitTask.java:2287)\n\tat org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:291)\n\tat jdk.internal.reflect.GeneratedMethodAccessor4.invoke(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat org.apache.tools.ant.dispatch.DispatchUtils.execute(DispatchUtils.java:106)\n\tat org.apache.tools.ant.Task.perform(Task.java:348)\n\tat org.apache.tools.ant.Target.execute(Target.java:392)\n\tat org.apache.tools.ant.Target.performTasks(Target.java:413)\n\tat org.apache.tools.ant.Project.executeSortedTargets(Project.java:1399)\n\tat org.apache.tools.ant.Project.executeTarget(Project.java:1368)\n\tat org.apache.tools.ant.helper.DefaultExecutor.executeTargets(DefaultExecutor.java:41)\n\tat org.apache.tools.ant.Project.executeTargets(Project.java:1251)\n\tat org.apache.tools.ant.Main.runBuild(Main.java:811)\n\tat org.apache.tools.ant.Main.startAnt(Main.java:217)\n\tat org.apache.tools.ant.launch.Launcher.run(Launcher.java:280)\n\tat org.apache.tools.ant.launch.Launcher.main(Launcher.java:109)\n"
+    }
+  },
+  "status": "passed",
+  "info": {
+    "command": [
+      "/mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/environments/defects4j/framework/bin/defects4j",
+      "info",
+      "-p",
+      "Cli",
+      "-b",
+      "1"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.938,
+    "log": "work/baseline/Cli-1/info.log"
+  }
+}

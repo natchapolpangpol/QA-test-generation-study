@@ -1,0 +1,5 @@
+digraph coverage {
+  "TeachingExamples#emptyItems()@47:EXIT" [label="TeachingExamples#emptyItems()@47:EXIT\nexit"];
+  "TeachingExamples#emptyItems()@47:block1" [label="TeachingExamples#emptyItems()@47:block1\nprocess"];
+  "TeachingExamples#emptyItems()@47:block1" -> "TeachingExamples#emptyItems()@47:EXIT" [label="next"];
+}

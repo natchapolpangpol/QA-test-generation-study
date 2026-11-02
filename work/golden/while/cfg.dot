@@ -1,0 +1,12 @@
+digraph coverage {
+  "TeachingExamples#whileLoop(int)@30:EXIT" [label="TeachingExamples#whileLoop(int)@30:EXIT\nexit"];
+  "TeachingExamples#whileLoop(int)@30:block1" [label="TeachingExamples#whileLoop(int)@30:block1\nprocess"];
+  "TeachingExamples#whileLoop(int)@30:block2" [label="TeachingExamples#whileLoop(int)@30:block2\ndecision"];
+  "TeachingExamples#whileLoop(int)@30:block3" [label="TeachingExamples#whileLoop(int)@30:block3\nprocess"];
+  "TeachingExamples#whileLoop(int)@30:block4" [label="TeachingExamples#whileLoop(int)@30:block4\nprocess"];
+  "TeachingExamples#whileLoop(int)@30:block1" -> "TeachingExamples#whileLoop(int)@30:EXIT" [label="next"];
+  "TeachingExamples#whileLoop(int)@30:block3" -> "TeachingExamples#whileLoop(int)@30:block2" [label="next"];
+  "TeachingExamples#whileLoop(int)@30:block2" -> "TeachingExamples#whileLoop(int)@30:block3" [label="T"];
+  "TeachingExamples#whileLoop(int)@30:block2" -> "TeachingExamples#whileLoop(int)@30:block1" [label="F"];
+  "TeachingExamples#whileLoop(int)@30:block4" -> "TeachingExamples#whileLoop(int)@30:block2" [label="next"];
+}

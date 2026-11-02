@@ -1,0 +1,32 @@
+* EvoSuite 1.2.0
+* Going to generate test cases for class: org.apache.commons.cli.CommandLine
+* Starting Client-0
+* Connecting to master process on port 19615
+* Analyzing classpath: 
+  - /mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/checkouts/Cli-1f/target/classes
+* Finished analyzing classpath
+* Generating tests for class org.apache.commons.cli.CommandLine
+* Test criterion:
+  - Branch Coverage
+[Progress:>                             0%] [Cov:>                                  0%]* Total number of test goals for DYNAMOSA: 32
+* Using seed 101
+* Starting evolution
+* Initial Number of Goals in DynaMOSA = 26 / 32
+[Progress:>                             0%] [Cov:===============================>   90%][Progress:>                             0%] [Cov:===============================>   90%][Progress:>                             0%] [Cov:===================================100%]
+* Search finished after 2s and 2 generations, 2357 statements, best individual has fitness: 0.0
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 32
+* Number of covered goals: 32
+* Generated 15 tests with total length 44
+* Resulting test suite's coverage: 100%
+* Generating assertions
+* Property NO_RUNTIME_DEPENDENCY is set to true - skipping JUnit compile check
+* WARNING: Not including the runtime dependencies is likely to lead to flaky tests!
+* Writing tests to file
+* Writing JUnit test case 'CommandLine_ESTest' to /mnt/c/Users/NATCHAPOL/Documents/Codex/2026-11-02/86/work/runs/cli1-dynamosa-001/tests
+* Done!
+
+* Computation finished

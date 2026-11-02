@@ -1,0 +1,4 @@
+target/classes
+STDERR:
+Running ant (export.dir.bin.classes)....................................... OK
+

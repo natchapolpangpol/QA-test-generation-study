@@ -1,0 +1,67 @@
+{
+  "scope": "classify",
+  "source_sha256": "5dce89da9220bd7f1b01b938c25eb20886cb970c30edb7e4b7400625438fa575",
+  "measurement_version": "0.1-prototype",
+  "events": 26,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L3",
+        "L4"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "classify@2:statement1",
+        "classify@2:statement2",
+        "classify@2:statement3"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "classify@2:block1",
+        "classify@2:block2",
+        "classify@2:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "classify@2:decision1:F",
+        "classify@2:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0,
+      "covered_ids": [
+        "classify@2:condition1:F",
+        "classify@2:condition1:T",
+        "classify@2:condition2:F",
+        "classify@2:condition2:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition_decision": {
+      "covered": 6,
+      "total": 6,
+      "percent": 100.0
+    }
+  }
+}

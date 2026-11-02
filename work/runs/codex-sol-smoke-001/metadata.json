@@ -1,0 +1,50 @@
+{
+  "model_requested": "gpt-6.1-sol",
+  "surface": "Codex CLI with ChatGPT subscription",
+  "phase": "infrastructure smoke test; not main study",
+  "reasoning_effort": "low",
+  "started_utc": "2026-11-02T08:51:09.916325+00:00",
+  "prompt_sha256": "1a6c0c93bd2e5f8dff9716c7ecb2ef65f5c2889205af7130eac667aa0bc05f67",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.EXE",
+    "C:\\Users\\NATCHAPOL\\AppData\\Roaming\\npm\\node_modules\\@openai\\codex\\bin\\codex.js",
+    "exec",
+    "--ignore-user-config",
+    "--skip-git-repo-check",
+    "--ephemeral",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "-c",
+    "web_search=\"disabled\"",
+    "--cd",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\codex-sol-smoke-001\\context",
+    "--output-schema",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\codex-sol-smoke-001\\response-schema.json",
+    "--output-last-message",
+    "C:\\Users\\NATCHAPOL\\Documents\\Codex\\2026-11-02\\86\\work\\runs\\codex-sol-smoke-001\\response.json",
+    "--json",
+    "-"
+  ],
+  "cli_version": "codex-cli 0.162.0",
+  "exit_code": 0,
+  "item_types": [
+    "agent_message"
+  ],
+  "tool_events": [],
+  "usage": [
+    {
+      "input_tokens": 12677,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 192,
+      "reasoning_output_tokens": 0
+    }
+  ],
+  "status": "generated_not_yet_validated",
+  "suite_sha256": "ffb67b2632f282970462d37eea54d5a964484c2178778711225d9452c628fe84",
+  "elapsed_seconds": 8.406
+}

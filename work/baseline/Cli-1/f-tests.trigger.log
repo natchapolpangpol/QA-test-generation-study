@@ -1,0 +1,4 @@
+org.apache.commons.cli.bug.BugCLI13Test::testCLI13
+STDERR:
+Running ant (export.tests.trigger)......................................... OK
+

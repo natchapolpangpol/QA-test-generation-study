@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a19b75-6e8b-7863-9e83-efd285b3d440"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"{\"java_source\":\"import org.junit.Test;\\nimport static org.junit.Assert.assertEquals;\\n\\npublic class GeneratedTest {\\n    @Test\\n    public void returnsOneWhenBothConditionsAreTrue() {\\n        assertEquals(1, AiTarget.classify(11, 21));\\n    }\\n\\n    @Test\\n    public void returnsZeroWhenFirstConditionIsFalse() {\\n        assertEquals(0, AiTarget.classify(10, 21));\\n    }\\n\\n    @Test\\n    public void returnsZeroWhenSecondConditionIsFalse() {\\n        assertEquals(0, AiTarget.classify(11, 20));\\n    }\\n}\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":12060,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":154,"reasoning_output_tokens":0}}

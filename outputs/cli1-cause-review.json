@@ -1,0 +1,45 @@
+{
+  "review_type": "assistant source-and-log review after frozen generation; not independent human review",
+  "project": "Cli",
+  "bug_id": 1,
+  "benchmark_trigger_used_only_after_generation_for_cause_review": true,
+  "fixed_behavior": "hasOption(String) resolves short/long names and strips leading hyphens before membership lookup",
+  "buggy_behavior": "hasOption(String) performs options.containsKey(opt), using the supplied string directly",
+  "benchmark_behavior": "BugCLI13Test checks hasOption(longName) after adding an option with different short and long names",
+  "sources": [
+    {
+      "path": "work/checkouts/Cli-1f/src/java/org/apache/commons/cli/CommandLine.java",
+      "sha256": "4000f382a138b952dbfc784318dbff32d21219c6b04ca5f22ee37396da944d35"
+    },
+    {
+      "path": "work/checkouts/Cli-1b/src/java/org/apache/commons/cli/CommandLine.java",
+      "sha256": "696a8a8f9458a00d237dd64786473f48002eb0efe02bb26252bac42def66fcc5"
+    },
+    {
+      "path": "work/checkouts/Cli-1f/src/test/org/apache/commons/cli/bug/BugCLI13Test.java",
+      "sha256": "46d2854c12ea2137aac196dc68b69b2fb4882f71f0d01d6b27475363dd15bd06"
+    }
+  ],
+  "runs": [
+    {
+      "run": "cli1-sol-001",
+      "confirmed_bug_detection": true,
+      "test_method": "presentOptionsWithoutValuesReturnNullAndUseDefaults",
+      "assertion": "assertTrue(line.hasOption(\"--verbose\"));",
+      "setup": "short v / long verbose",
+      "suite_sha256": "74ac9113636706825ba65777a0f4925baef8da99ca8e1b6bfd0756b3d7fdeccb",
+      "cause": "Distinct long-name lookup is true on fixed and false on buggy, matching the CLI-13 alias-resolution regression",
+      "not_all_additional_failures_individually_reviewed": true
+    },
+    {
+      "run": "cli1-terra-001",
+      "confirmed_bug_detection": true,
+      "test_method": "presentOptionWithoutValueUsesDefaults",
+      "assertion": "assertTrue(line.hasOption(\"flag\"));",
+      "setup": "short f / long flag",
+      "suite_sha256": "d4eda95ef125292af55e128ea89b9b113a274f4f0a0bec318dea9e282fa9b45b",
+      "cause": "Distinct long-name lookup is true on fixed and false on buggy, matching the CLI-13 alias-resolution regression",
+      "not_all_additional_failures_individually_reviewed": true
+    }
+  ]
+}

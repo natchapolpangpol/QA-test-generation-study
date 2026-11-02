@@ -1,0 +1,35 @@
+JUnit version 4.13.2
+..E..E.E.E.
+Time: 0.156
+There were 4 failures:
+1) presentOptionsWithoutValuesReturnNullAndUseDefaults(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at org.apache.commons.cli.GeneratedTest.presentOptionsWithoutValuesReturnNullAndUseDefaults(GeneratedTest.java:65)
+2) optionArrayAndIteratorContainMembersAndIteratorCanRemove(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at org.apache.commons.cli.GeneratedTest.optionArrayAndIteratorContainMembersAndIteratorCanRemove(GeneratedTest.java:160)
+3) typedStringValuesAreReturnedThroughBothOverloads(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError: expected:<hello world> but was:<null>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.apache.commons.cli.GeneratedTest.typedStringValuesAreReturnedThroughBothOverloads(GeneratedTest.java:106)
+4) resolvesShortAndLongNamesWithLeadingHyphens(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError: -o
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.apache.commons.cli.GeneratedTest.resolvesShortAndLongNamesWithLeadingHyphens(GeneratedTest.java:40)
+
+FAILURES!!!
+Tests run: 7,  Failures: 4
+
+
+STDERR:

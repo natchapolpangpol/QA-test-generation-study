@@ -1,0 +1,68 @@
+{
+  "scope": "sideEffects",
+  "source_sha256": "56e8317c6fee8e824798aae07b3360130d7e777e857e4a0f6eff8577c8db5419",
+  "measurement_version": "0.2-prototype",
+  "events": 17,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L23",
+        "L24"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#sideEffects(boolean,boolean)@22:statement1",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:statement2",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:statement3"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#sideEffects(boolean,boolean)@22:block1",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:block2",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "TeachingExamples#sideEffects(boolean,boolean)@22:decision1:F",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 3,
+      "total": 4,
+      "percent": 75.0,
+      "covered_ids": [
+        "TeachingExamples#sideEffects(boolean,boolean)@22:condition1:F",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:condition1:T",
+        "TeachingExamples#sideEffects(boolean,boolean)@22:condition2:T"
+      ],
+      "uncovered_ids": [
+        "TeachingExamples#sideEffects(boolean,boolean)@22:condition2:F"
+      ]
+    },
+    "condition_decision": {
+      "covered": 5,
+      "total": 6,
+      "percent": 83.33333333333333
+    }
+  }
+}

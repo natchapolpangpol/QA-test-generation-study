@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#booleanXor(boolean,boolean)@43:EXIT" [label="TeachingExamples#booleanXor(boolean,boolean)@43:EXIT\nexit"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block1" [label="TeachingExamples#booleanXor(boolean,boolean)@43:block1\nprocess"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block2" [label="TeachingExamples#booleanXor(boolean,boolean)@43:block2\ndecision"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block3" [label="TeachingExamples#booleanXor(boolean,boolean)@43:block3\nprocess"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block1" -> "TeachingExamples#booleanXor(boolean,boolean)@43:EXIT" [label="next"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block3" -> "TeachingExamples#booleanXor(boolean,boolean)@43:EXIT" [label="next"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block2" -> "TeachingExamples#booleanXor(boolean,boolean)@43:block3" [label="T"];
+  "TeachingExamples#booleanXor(boolean,boolean)@43:block2" -> "TeachingExamples#booleanXor(boolean,boolean)@43:block1" [label="F"];
+}

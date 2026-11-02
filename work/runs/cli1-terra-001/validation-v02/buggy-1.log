@@ -1,0 +1,25 @@
+JUnit version 4.13.2
+.E..E.E..
+Time: 0.323
+There were 3 failures:
+1) presentOptionWithoutValueUsesDefaults(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at org.apache.commons.cli.GeneratedTest.presentOptionWithoutValueUsesDefaults(GeneratedTest.java:60)
+2) resolvesShortLongAndHyphenatedNamesAndReturnsValues(org.apache.commons.cli.GeneratedTest)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at org.apache.commons.cli.GeneratedTest.resolvesShortLongAndHyphenatedNamesAndReturnsValues(GeneratedTest.java:42)
+3) convertsTypedOptionValues(org.apache.commons.cli.GeneratedTest)
+java.lang.NullPointerException
+	at org.apache.commons.cli.GeneratedTest.convertsTypedOptionValues(GeneratedTest.java:77)
+
+FAILURES!!!
+Tests run: 6,  Failures: 3
+
+
+STDERR:

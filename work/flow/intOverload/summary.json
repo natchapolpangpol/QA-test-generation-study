@@ -1,0 +1,65 @@
+{
+  "scope": "select(int)",
+  "source_sha256": "d354d979915c5c7d915edd43eb793f0bd7e1c05d34451176b87a510be1ac9339",
+  "measurement_version": "0.2-prototype",
+  "events": 16,
+  "metrics": {
+    "line": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "L4",
+        "L5"
+      ],
+      "uncovered_ids": []
+    },
+    "statement": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#select(int)@3:statement1",
+        "FlowExamples#select(int)@3:statement2",
+        "FlowExamples#select(int)@3:statement3"
+      ],
+      "uncovered_ids": []
+    },
+    "block": {
+      "covered": 3,
+      "total": 3,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#select(int)@3:block1",
+        "FlowExamples#select(int)@3:block2",
+        "FlowExamples#select(int)@3:block3"
+      ],
+      "uncovered_ids": []
+    },
+    "decision": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#select(int)@3:decision1:F",
+        "FlowExamples#select(int)@3:decision1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition": {
+      "covered": 2,
+      "total": 2,
+      "percent": 100.0,
+      "covered_ids": [
+        "FlowExamples#select(int)@3:condition1:F",
+        "FlowExamples#select(int)@3:condition1:T"
+      ],
+      "uncovered_ids": []
+    },
+    "condition_decision": {
+      "covered": 4,
+      "total": 4,
+      "percent": 100.0
+    }
+  }
+}

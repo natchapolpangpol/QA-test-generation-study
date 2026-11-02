@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#exceptional(Integer,boolean)@26:EXIT" [label="TeachingExamples#exceptional(Integer,boolean)@26:EXIT\nexit"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block1" [label="TeachingExamples#exceptional(Integer,boolean)@26:block1\nprocess"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block2" [label="TeachingExamples#exceptional(Integer,boolean)@26:block2\ndecision"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block3" [label="TeachingExamples#exceptional(Integer,boolean)@26:block3\nprocess"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block1" -> "TeachingExamples#exceptional(Integer,boolean)@26:EXIT" [label="next"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block3" -> "TeachingExamples#exceptional(Integer,boolean)@26:EXIT" [label="next"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block2" -> "TeachingExamples#exceptional(Integer,boolean)@26:block3" [label="T"];
+  "TeachingExamples#exceptional(Integer,boolean)@26:block2" -> "TeachingExamples#exceptional(Integer,boolean)@26:block1" [label="F"];
+}

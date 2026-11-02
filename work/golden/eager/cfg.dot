@@ -1,0 +1,10 @@
+digraph coverage {
+  "TeachingExamples#eager(int,int)@3:EXIT" [label="TeachingExamples#eager(int,int)@3:EXIT\nexit"];
+  "TeachingExamples#eager(int,int)@3:block1" [label="TeachingExamples#eager(int,int)@3:block1\ndecision"];
+  "TeachingExamples#eager(int,int)@3:block2" [label="TeachingExamples#eager(int,int)@3:block2\nprocess"];
+  "TeachingExamples#eager(int,int)@3:block3" [label="TeachingExamples#eager(int,int)@3:block3\nprocess"];
+  "TeachingExamples#eager(int,int)@3:block2" -> "TeachingExamples#eager(int,int)@3:EXIT" [label="next"];
+  "TeachingExamples#eager(int,int)@3:block1" -> "TeachingExamples#eager(int,int)@3:block2" [label="T"];
+  "TeachingExamples#eager(int,int)@3:block3" -> "TeachingExamples#eager(int,int)@3:EXIT" [label="next"];
+  "TeachingExamples#eager(int,int)@3:block1" -> "TeachingExamples#eager(int,int)@3:block3" [label="F"];
+}
